@@ -1,17 +1,19 @@
 <!DOCTYPE html>
     	<!-- AVF Project 1,2,3,4-->
     	<!-- Joshua Wisecup -->
-    	<!-- Term 1308 --> 
+    	<!-- Term 1309 --> 
 <html>
     <head>
-        <title>Bakers'Dozen</title>
+        <title>Bakers' Dozen</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta http-equiv="cleartype" content="on">
         
 		<!-- the css -->
-        <link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile.structure-1.3.1.min.css" />
+        <link rel="stylesheet" href="css/Cubano/stylesheet.css" type="text/css" charset="utf-8" />
+        <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" type="text/css" charset="utf-8" />
         <link rel="stylesheet" href="css/bakers.css" />
         <link rel="stylesheet" href="css/app.css" />
 
@@ -28,33 +30,45 @@
 		<section data-role="page" id="home" data-url="home" data-theme="a" class="homepage">
         
             <header data-role="header" data-position="fixed">
-            	<h1>Bakers'Dozen</h1>
+            	<div class="navbar">
+                	<div class="navbar-inner">
+                   	</div>
+                </div>
+            	<div class="brandingRow">
+                	<span class="brandingImg"></span>
+            		<h1>Bakers' Dozen</h1>
+                </div>
             </header><!-- /header -->
 
             <div id="mainContent" data-role="content">
                 
-                <p class="lead">Joshua Wisecup AVF 1308. Find Local Bakeries.</p>
+                <p class="lead">Joshua Wisecup AVF 1309. Find Local Bakeries.</p>
                 
                 <h2>Phone Features</h2>
                 
                 <ul id="mainSearch" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Filter Features..." data-theme="a">
                     <li>
+                    	<i class="icon-group"></i>
                         <h3 class="mainListHeader">Contacts</h3>
                         <p>iOS and Android</p>
                     </li>
                     <li>
+                    	<i class="icon-camera-retro"></i>
                         <h3 class="mainListHeader">Camera</h3>
                         <p>iOS and Android</p>
                     </li>
                     <li>
+                    	<i class="icon-location-arrow"></i>
                         <h3 class="mainListHeader">Geolocation</h3>
                         <p>iOS and Android</p>
                     </li>
                     <li>
+                    	<i class="icon-move"></i>
                         <h3 class="mainListHeader">Accelerometer</h3>
                         <p>iOS</p>
                     </li>
                     <li>
+                    	<i class="icon-globe"></i>
                         <h3 class="mainListHeader">Network</h3>
                         <p>iOS and Android</p>
                     </li>	
@@ -65,16 +79,19 @@
                 <ul id="dataAPI" data-role="listview" data-inset="true" data-theme="a">
                     <li>
                     	<a href="http://www.yelp.com/developers/documentation">
+                        <i class="icon-food"></i>
                         	<h3 class="mainListHeader">Yelp API</h3>
                         </a>
                     </li>
                     <li>
                     	<a href="https://dev.twitter.com/">
+                        <i class="icon-twitter"></i> 
                         	<h3 class="mainListHeader">Twitter API</h3>
                         </a>
                     </li>
                     <li>
                     	<a href="http://instagram.com/developer/">
+                        <i class="icon-camera"></i>
                         	<h3 class="mainListHeader">Instagram API</h3>
                         </a>
                     </li>
@@ -99,24 +116,42 @@
                     <li>
                         	<h3 class="mainListHeader">Week 3</h3>
                     </li>
+                    <li>
+                    	<a href="#wk3rsch">
+                        	<h3 class="mainListHeader">Week 3 : Research</h3>
+                        </a>
+                    </li>
                 </ul>   
              
             </div><!-- /content -->
   
-            <footer data-role="footer" data-position="fixed">
+            <footer data-role="footer" data-id="footerNav" data-position="fixed">
                 <nav data-role="navbar">
+                	<ul>
+						<li><a href="#home" class="ui-btn-active ui-state-persist">Home</a></li>
+						<li><a href="#photo">Photos</a></li>
+						<li><a href="#tweet">Tweets</a></li>
+						<li><a href="#bake">Bakeries</a></li>
+					</ul>
                 </nav>
             </footer><!-- /footer -->
             
         </section><!-- /front page -->
 
 
-    	<!-- Week 1 Research -->
+    	<!-- Week 2 Research -->
 
     	<section data-role="page" id="wk2rsch" data-url="wk2rsch" class="wk2rsch" data-theme="a">
         
             <header data-role="header" data-position="fixed">
-            	<h1>Bakers'Dozen</h1>
+            	<div class="navbar">
+                	<div class="navbar-inner">
+                   	</div>
+                </div>
+            	<div class="brandingRow">
+                	<span class="brandingImg"></span>
+            		<h1>Bakers' Dozen</h1>
+                </div>
             </header><!-- /header -->
 
             <div data-role="content">
@@ -175,22 +210,235 @@
 				<a href="#home" data-role="button" data-theme="c" data-inline="true">Go To Homepage</a> 
             </div><!-- /content -->
 
-            <footer data-role="footer" data-position="fixed">
+            <footer data-role="footer" data-id="footerNav" data-position="fixed">
                 <nav data-role="navbar">
-
+                	<ul>
+						<li><a href="#home">Home</a></li>
+						<li><a href="#photo">Photos</a></li>
+						<li><a href="#tweet">Tweets</a></li>
+						<li><a href="#bake">Bakeries</a></li>
+					</ul>
                 </nav>
             </footer><!-- /footer -->
             
-        </section><!-- /404page -->
+        </section><!-- /week2 -->
 
 
+
+    	<!-- Week 3 Research -->
+
+    	<section data-role="page" id="wk2rsch" data-url="wk3rsch" class="wk2rsch" data-theme="a">
+        
+            <header data-role="header" data-position="fixed">
+            	<div class="navbar">
+                	<div class="navbar-inner">
+                   	</div>
+                </div>
+            	<div class="brandingRow">
+                	<span class="brandingImg"></span>
+            		<h1>Bakers' Dozen</h1>
+                </div>
+            </header><!-- /header -->
+
+            <div data-role="content">
+                <p class="lead">This is research related to Week 3.</p>
+                
+                <h2>Week 3 Research</h2>
+                
+                <p>
+                
+                <div data-role="collapsible" data-theme="b" data-content-theme="d">
+    				<h4>Accessibility</h4>
+    				<strong>What are some of the ways that you could change your HTML on your Demo app to be more accessible? (Remember, you can use the Section tag with jQuery, for instance)</strong>
+                    <p>
+                    After looking over my HTML, I could not find any areas I could improve since I had accessibility in mind from the outset. I do my best not to use a lot of images, and instead use CSS for backgrounds and the like. All of the identifying images for the Features and API areas are not images at all, but rather are a webfont. The only image I have in the site is presentational, coded in CSS, and the associated text is not embedded in the image, but is text on the page instead. </p>
+                    <p>What I will continue to do in the future is use proper sections and identifying headers, and any images that appear in content will have alt text.
+                    </p>
+				</div>
+                
+                 <div data-role="collapsible" data-theme="b" data-content-theme="d">
+    				<h4>Accessibility Frustrations</h4>
+    				<strong>Visit a video service on the web (like YouTube) and search for "Screen Reader Demo" and "Mobile Screen Reader" - what are some of the common frustrations (or common support mechanisms) that you see among the examples that are given - how could you fix them (or use them)?</strong>
+                    <p>
+                    The most common issue seems to be that screen readers are not easy to use to begin with, and require a lot of training. Beyond that, identifying major sections and accessing links quickly are a huge issue.</p>
+                    <p>
+                    It seems the best way to fix them would be to simplify the content to the point where everything is grouped in logical sections under major headers on the page, and clearly identifying and choosing succinct link text to make it easier to make logical assumptions for the impaired user.
+                    </p>
+				</div>
+                <div data-role="collapsible" data-theme="b" data-content-theme="d">
+    				<h4>Accessibility Device Features</h4>
+    				<strong>Devices: Please list two devices (and some of their features) that are made specifically to support Accessibility.</strong>
+                    <p>
+                        <strong>iPhone</strong>
+                        <ul> 
+                            <li>VoiceOver, an advanced screen reader</li>
+                            <li>Dictation, talk and type</li>
+                            <li>Zoom, magnifier</li>
+                            <li>Braille Display integration</li>
+                            <li>Closed Captions</li>
+                           	<li>Visible and Vibrating alerts for the hearing impaired</li>
+                        </ul> 
+                        <strong>Nexus 7</strong>
+                        <ul> 
+                            <li>TalkBack, screen reader</li>
+                            <li>Explore by Touch, touch the screen and hear what’s spoken</li>
+                            <li>Magnification gestures, zoom in and out</li>
+                        </ul>                            
+                    </p>
+				</div>
+                <div data-role="collapsible" data-theme="b" data-content-theme="d">
+    				<h4>Mobile Apps for Accessibility</h4>
+    				<strong>Mobile Apps: Please list two apps (either Android or iOS, or both) that are made specifically to support Accessibility.
+</strong>
+                    <p>
+                        <ul> 
+                            <li>Siri on iOS</li>
+                            <li>TalkBack on Android</li>
+                        </ul>                    
+                    </p>
+                    
+				</div>
+  
+ 
+
+                </p>
+				<a href="#home" data-role="button" data-theme="c" data-inline="true">Go To Homepage</a> 
+            </div><!-- /content -->
+
+            <footer data-role="footer" data-id="footerNav" data-position="fixed">
+                <nav data-role="navbar">
+                	<ul>
+						<li><a href="#home">Home</a></li>
+						<li><a href="#photo">Photos</a></li>
+						<li><a href="#tweet">Tweets</a></li>
+						<li><a href="#bake">Bakeries</a></li>
+					</ul>
+                </nav>
+            </footer><!-- /footer -->
+            
+        </section><!-- /week3 -->
+
+    
+    	<!-- Instagram -->
+
+    	<section data-role="page" id="photo" data-url="photo" class="photo" data-theme="a">
+        
+            <header data-role="header" data-position="fixed">
+            	<div class="navbar">
+                	<div class="navbar-inner">
+                   	</div>
+                </div>
+            	<div class="brandingRow">
+                	<span class="brandingImg"></span>
+            		<h1>Bakers' Dozen</h1>
+                </div>
+            </header><!-- /header -->
+
+            <div data-role="content">
+				<div class="photoGrid">
+                	<ul id="photoList"></ul>
+                </div>
+            </div><!-- /content -->
+
+            <footer data-role="footer" data-id="footerNav" data-position="fixed">
+                <nav data-role="navbar">
+                	<ul>
+						<li><a href="#home">Home</a></li>
+						<li><a href="#photo" class="ui-btn-active ui-state-persist">Photos</a></li>
+						<li><a href="#tweet">Tweets</a></li>
+						<li><a href="#bake">Bakeries</a></li>
+					</ul>
+                </nav>
+            </footer><!-- /footer -->
+            
+        </section><!-- /Instagram -->
+        
+    
+    	<!-- Twitter -->
+
+    	<section data-role="page" id="tweet" data-url="tweet" class="tweet" data-theme="a">
+        
+            <header data-role="header" data-position="fixed">
+            	<div class="navbar">
+                	<div class="navbar-inner">
+                   	</div>
+                </div>
+            	<div class="brandingRow">
+                	<span class="brandingImg"></span>
+            		<h1>Bakers' Dozen</h1>
+                </div>
+            </header><!-- /header -->
+
+            <div data-role="content">
+				<div class="tweets">
+                	<ul id="tweetList"></ul>
+                </div>
+            </div><!-- /content -->
+
+            <footer data-role="footer" data-id="footerNav" data-position="fixed">
+                <nav data-role="navbar">
+                	<ul>
+						<li><a href="#home">Home</a></li>
+						<li><a href="#photo">Photos</a></li>
+						<li><a href="#tweet" class="ui-btn-active ui-state-persist">Tweets</a></li>
+						<li><a href="#bake">Bakeries</a></li>
+					</ul>
+                </nav>
+            </footer><!-- /footer -->
+            
+        </section><!-- /Twitter -->    
+    
+
+
+    	<!-- Yelp -->
+
+    	<section data-role="page" id="bake" data-url="bake" class="bake" data-theme="a">
+        
+            <header data-role="header" data-position="fixed">
+            	<div class="navbar">
+                	<div class="navbar-inner">
+                   	</div>
+                </div>
+            	<div class="brandingRow">
+                	<span class="brandingImg"></span>
+            		<h1>Bakers' Dozen</h1>
+                </div>
+            </header><!-- /header -->
+
+            <div data-role="content">
+				<div class="localBakery">
+                	<ul id="bakeryList"></ul>
+                </div>
+            </div><!-- /content -->
+
+            <footer data-role="footer" data-id="footerNav" data-position="fixed">
+                <nav data-role="navbar">
+                	<ul>
+						<li><a href="#home">Home</a></li>
+						<li><a href="#photo">Photos</a></li>
+						<li><a href="#tweet">Tweets</a></li>
+						<li><a href="#bake" class="ui-btn-active ui-state-persist">Bakeries</a></li>
+					</ul>
+                </nav>
+            </footer><!-- /footer -->
+            
+        </section><!-- /Yelp -->
+
+        
 
     	<!-- 404 Page -->
 
     	<section data-role="page" id="404" data-url="404" class="404" data-theme="a">
         
             <header data-role="header" data-position="fixed">
-            	<h1>Bakers'Dozen</h1>
+            	<div class="navbar">
+                	<div class="navbar-inner">
+                   	</div>
+                </div>
+            	<div class="brandingRow">
+                	<span class="brandingImg"></span>
+            		<h1>Bakers' Dozen</h1>
+                </div>
             </header><!-- /header -->
 
             <div data-role="content">
@@ -199,9 +447,14 @@
 				<a href="#home" data-role="button" data-theme="c" data-inline="true">Go To Homepage</a> 
             </div><!-- /content -->
 
-            <footer data-role="footer" data-position="fixed">
+            <footer data-role="footer" data-id="footerNav" data-position="fixed">
                 <nav data-role="navbar">
-
+                	<ul>
+						<li><a href="#home">Home</a></li>
+						<li><a href="#photo">Photos</a></li>
+						<li><a href="#tweet">Tweets</a></li>
+						<li><a href="#bake">Bakeries</a></li>
+					</ul>
                 </nav>
             </footer><!-- /footer -->
             
@@ -213,6 +466,8 @@
 		<!-- the scripts -->
         <script src="js/jquery-1.9.1.min.js"></script>
         <script src="js/jquery.mobile-1.3.1.min.js"></script>
+        <script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
+			<script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>
