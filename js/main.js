@@ -21,7 +21,7 @@ $( document ).on( "pageinit", ".photo", function() {
 		console.log(info);
 	
 		$.each(info.data, function(index, photo){
-			var pic = "<li><a href='" + photo.images.standard_resolution.url + "' target='_blank'><img src='" + photo.images.thumbnail.url +"'alt='" + photo.user.id + "' /></a></li>";
+			var pic = "<li><a data-rel='dialog' href='" + photo.images.standard_resolution.url + "' target='_blank'><img src='" + photo.images.thumbnail.url +"'alt='" + photo.user.id + "' /></a></li>";
 			$("#photoList").append(pic);
 		});
 	};	
@@ -49,7 +49,7 @@ var auth = {
 };
 
 var terms = 'bakery';
-var near = 'Frankfort';
+var near = 'Frankfort, Kentucky';
 
 var accessor = {
   consumerSecret: auth.consumerSecret,
@@ -86,49 +86,26 @@ $.ajax({
   'jsonpCallback': 'cb',
   'success': function(data, textStats, XMLHttpRequest) {
     console.log(data);
-    var output = JSON.stringify(data);
-    console.log(output);
+	console.log(data.total);
 
-//	var place = "<li><a href='" + output.mobile_url + "' target='_blank'><img src='" + output.image_url +"'alt='" + output.name + "' /></a></li>";
-//    $("#bakeryList").append(place);
+	//Pretty Print output
+//    var output = prettyPrint(data);
+//    $("#bakeryList").append(output);	
+	
+    var output = [];
+    $.each(data, function(i,v){
+		for (var i = 0; i < v.length; i++) {
+        output.push('<li><a data-rel="dialog" href="' + v[i].mobile_url + '"><img src=' + v[i].image_url + ' /><h2>' + v[i].name + '</h2><p>' + v[i].location.display_address[0] + '<br/>' + v[i].location.display_address[1] + '</p></a></li>');
+		}		
+	    $("#bakeryList").append(output).trigger("create");	
+    });
+	
+	$(".localBakery").trigger("create");
 
   }
-});
-
-//// put places in a list
-//	var results = function(info){
-//		console.log(info);
-//	
-//		$.each(info.data, function(index, photo){
-//			var pic = "<li><a href='" + photo.images.standard_resolution.url + "' target='_blank'><img src='" + photo.images.thumbnail.url +"'alt='" + photo.user.id + "' /></a></li>";
-//			$("#photoList").append(pic);
-//		});
-//	};	
-//	
-//	$(".photoGrid").trigger("create");
-
+  
 });
 
 
-////// put Yelp into a list	
-//$( document ).on( "pageinit", ".bake", function() {
-//	$.mobile.changePage("#bake", {});
-//	$('#bakeryList').empty();
-//	var local = "Frankfort%2A%20KY";
-//	var url = 'https://api.yelp.com/neighborhood_search?location='+ local +
-//				'&ywsid=ZdW-pvSHXWpRtw4cTQkbGA';				
-//	$.getJSON(url, bakeResults);	
-//	});
-//
-//
-//// put photos in a list
-//	var bakeResults = function(info){
-//		console.log(info);
-////	
-////		$.each(info.data, function(index, neighborhoods){
-////			var foodLink = "<li><a href='" + url + "' target='_blank'><h3>'" + name + "'</h3></a></li>";
-////			$("#bakeryList").append(foodLink);
-////		});
-//	};	
-////	
-////	$(".localBakery").trigger("create");
+});
+

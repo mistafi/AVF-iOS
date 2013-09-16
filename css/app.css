@@ -183,8 +183,6 @@ label.error {
 .mainListImg {
 	margin:10px;	
 }
-.mainListHeader {
-}
 
 #dataAPI li i, #mainSearch li i {
 	max-height: 16px;
@@ -194,7 +192,7 @@ label.error {
 	position: absolute;	
 }
 
-#dataAPI .mainListHeader, #mainSearch .mainListHeader, #mainSearch p {
+#dataAPI h3, #mainSearch h3, #mainSearch p {
 	margin-left: 20px;	
 }
 
