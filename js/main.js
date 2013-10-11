@@ -1,11 +1,21 @@
 // JavaScript Document
 //AVF Project 1,2,3,4
 //Joshua Wisecup
-//Term 1310
+//Term 1310	
+
+
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() { 
+	$("#photo").on("click", instagramFn); 
+	$("#bake").on("click", yelpFn); 
+	//etc...
+}; // phonegap deviceready 
+
 
 // Instagram
 
-$( document ).on( "pageinit", ".photo", function() {
+var instagramFn = function() {
 	$.mobile.changePage("#photo", {});
 	$('#photoList').empty();
 	var tag = "bakery";
@@ -13,7 +23,7 @@ $( document ).on( "pageinit", ".photo", function() {
 				'/media/recent?callback=?&amp;client_id=453262ad83504533be1195b63bc34d76';	
 	$.getJSON(url, results);	
 	
-});
+};
 
 
 // put photos in a list
@@ -29,7 +39,7 @@ $( document ).on( "pageinit", ".photo", function() {
 	$(".photoGrid").trigger("create");
 
 
-$( document ).on( "pageinit", ".bake", function() {
+var yelpFn = function() {
 	$.mobile.changePage("#bake", {});
 	$('#bakeryList').empty();
 
@@ -39,10 +49,10 @@ var auth = {
   //
   consumerKey: "9wv1pSGnfnsKq8Y_yOL1XQ", 
   consumerSecret: "r0lAxJgAEtH-KpaATS2zdZIlWIk",
-  accessToken: "9mjG_phIuMbokNCeG5nMfKS0UeTYOlwZ",
+  accessToken: "NytwIndyfqDRSJzTRnlXjBGDDtjQXL7D",
   // This example is a proof of concept, for how to use the Yelp v2 API with javascript.
   // You wouldn't actually want to expose your access token secret like this in a real application.
-  accessTokenSecret: "lb5m4BusI8_E2-zBWL4i-NHJzvw",
+  accessTokenSecret: "tdDJS7LH8NglaIcxNEhq1pGpKpI",
   serviceProvider: { 
     signatureMethod: "HMAC-SHA1"
   }
@@ -107,5 +117,5 @@ $.ajax({
 });
 
 
-});
+};
 
