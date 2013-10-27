@@ -384,7 +384,7 @@ margin:15px 15px 0 0;
 }
 
 /* Desktop */
-@media min-width: 1225px) { 
+@media (min-width: 1225px) { 
 
 .brandingRow {
 width: 600px;
@@ -408,7 +408,7 @@ margin: 0px 0px 5px 0px;
 }
 
 /* iPad Max */
-@media max-width: 1224px) { 
+@media (max-width: 1224px) { 
 
 
 }
@@ -434,15 +434,14 @@ width: 360px;
 
 .brandingImg {
 background-size: 100%;
-width: 96px;
-height: 96px;
+width: 80px;
+height: 80px;
 float: left;
 }
 
 header h1 {
-font-size: 27px!important;
+font-size: 22px!important;
 margin: 0px;
-width: 300px;
 }
 
 }
