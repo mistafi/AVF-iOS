@@ -35,7 +35,13 @@ if(typeof device !== "undefined")
 						}
 				} 
 		});
-				
+		
+ 		$('#moveLink').on('click', function(){
+
+			alert('Is this thing working?');
+		
+						
+		});				
 		
 		
 		$(document).on( "pageinit", ".photo", function() {
