@@ -11,6 +11,37 @@ if(typeof device !== "undefined")
 	document.addEventListener("deviceready", onDeviceReady, false);
 	
 	function onDeviceReady() { 
+
+ 		$('#geoLink').on('click', function(){
+			var watchID = null;
+        	var options = { frequency: 3000 };
+        	watchID = navigator.geolocation.watchPosition(geoSuccess, geoError, options);
+				
+				function geoSuccess(position) {
+					var element = document.getElementById('geoList');
+					element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
+										'Longitude: '          + position.coords.longitude             + '<br />' +
+										'Altitude: '           + position.coords.altitude              + '<br />' +
+										'Accuracy: '           + position.coords.accuracy              + '<br />' +
+										'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
+										'Heading: '            + position.coords.heading               + '<br />' +
+										'Speed: '              + position.coords.speed                 + '<br />' +
+										'Timestamp: '          + new Date(position.timestamp * 1000)   + '<br />';
+				}
+				
+				function geoError(error) {
+						if( error == 1) {
+								alert('Please turn on Geolocation services.');
+						}
+				} 
+		});
+		
+ 		$('#moveLink').on('click', function(){
+
+			alert('Is this thing working?');
+		
+						
+		});				
 		
 		
 		$(document).on( "pageinit", ".photo", function() {
@@ -120,6 +151,7 @@ if(typeof device !== "undefined")
 				}); //end ajax call...
 		
 		}); //end doc ready
+		
 		
 	}; // phonegap deviceready 
 
@@ -240,6 +272,29 @@ else
 	
 	}); //end doc ready
 
+ 		$('#geoLink').on('click', function(){
+			var watchID = null;
+        	var options = { frequency: 3000 };
+        	watchID = navigator.geolocation.watchPosition(geoSuccess, geoError, options);
+				
+				function geoSuccess(position) {
+					var element = document.getElementById('geoList');
+					element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
+										'Longitude: '          + position.coords.longitude             + '<br />' +
+										'Altitude: '           + position.coords.altitude              + '<br />' +
+										'Accuracy: '           + position.coords.accuracy              + '<br />' +
+										'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
+										'Heading: '            + position.coords.heading               + '<br />' +
+										'Speed: '              + position.coords.speed                 + '<br />' +
+										'Timestamp: '          + new Date(position.timestamp * 1000)   + '<br />';
+				}
+				
+				function geoError(error) {
+						if( error == 1) {
+								alert('Please turn on Geolocation services.');
+						}
+				} 
+		});
 	
 }
 
