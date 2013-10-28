@@ -59,8 +59,10 @@
                     </li>
                     <li>
                     	<i class="icon-location-arrow"></i>
-                        <h3>Geolocation</h3>
-                        <p>iOS and Android</p>
+                        <a href="#geo" id="geoLink">
+                            <h3>Geolocation</h3>
+                            <p>iOS and Android</p>
+                        </a>
                     </li>
                     <li>
                     	<i class="icon-move"></i>
@@ -227,7 +229,7 @@
 
     	<!-- Week 3 Research -->
 
-    	<section data-role="page" id="wk2rsch" data-url="wk3rsch" class="wk2rsch" data-theme="a">
+    	<section data-role="page" id="wk3rsch" data-url="wk3rsch" class="wk3rsch" data-theme="a">
         
             <header data-role="header" data-position="fixed">
             	<div class="navbar">
@@ -345,7 +347,7 @@
                 <nav data-role="navbar">
                 	<ul>
 						<li><a href="#home">Home</a></li>
-						<li><a href="#photo" class="ui-btn-active ui-state-persist">Photos</a></li>
+						<li><a href="#photo" id="instagram" class="ui-btn-active ui-state-persist">Photos</a></li>
 						<li><a href="#">Tweets</a></li>
 						<li><a href="#bake" id="yelp">Bakeries</a></li>
 					</ul>
@@ -420,14 +422,50 @@
 						<li><a href="#home">Home</a></li>
 						<li><a href="#photo" id="instagram">Photos</a></li>
 						<li><a href="#">Tweets</a></li>
-						<li><a href="#bake" class="ui-btn-active ui-state-persist">Bakeries</a></li>
+						<li><a href="#bake" id="yelp" class="ui-btn-active ui-state-persist">Bakeries</a></li>
 					</ul>
                 </nav>
             </footer><!-- /footer -->
             
         </section><!-- /Yelp -->
 
+
+    	<!-- Geolocation -->
+
+    	<section data-role="page" id="geo" data-url="geo" class="geo" data-theme="a">
         
+            <header data-role="header" data-position="fixed">
+            	<div class="navbar">
+                	<div class="navbar-inner">
+                   	</div>
+                </div>
+            	<div class="brandingRow">
+                	<span class="brandingImg"></span>
+            		<h1>Bakers' Dozen</h1>
+                </div>
+            </header><!-- /header -->
+
+            <div data-role="content">
+            	<h2>Your Location</h2>
+				<div class="localBakery">
+                	<p id="geoList">Finding your location...</p>
+                </div>
+            </div><!-- /content -->
+
+            <footer data-role="footer" data-id="footerNav" data-position="fixed">
+                <nav data-role="navbar">
+                	<ul>
+						<li><a href="#home">Home</a></li>
+						<li><a href="#photo" id="instagram">Photos</a></li>
+						<li><a href="#">Tweets</a></li>
+						<li><a href="#bake" id="yelp">Bakeries</a></li>
+					</ul>
+                </nav>
+            </footer><!-- /footer -->
+            
+        </section><!-- /Geolocation -->
+
+
 
     	<!-- 404 Page -->
 
@@ -469,6 +507,7 @@
 		<!-- the scripts -->
         <script src="js/jquery-1.9.1.min.js"></script>
         <script src="js/jquery.mobile-1.3.1.min.js"></script>
+        <script src="phonegap.js"></script>
         <script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
 			<script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
             <script type="text/javascript" src="js/prettyprint.js"></script>
